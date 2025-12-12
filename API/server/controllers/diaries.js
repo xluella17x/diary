@@ -1,7 +1,6 @@
 const Diary = require('../models/Diary');
 
 async function index(req, res) {
-    
     try {
         const diaries = await Diary.getAll();
         res.status(200).json(diaries);

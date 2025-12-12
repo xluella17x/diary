@@ -1,10 +1,10 @@
 const { Router } = require('express')
-const countryController = require('../controllers/diaries')
+const diaryController = require('../controllers/diaries')
 
 const diaryRouter = Router()
 
-countryRouter.get('/diary/all', diaryController.index)
-diaryController.get('diary/:date',diaryController.show)
-diaryController.get('/diary/post',diaryController.create)
+diaryRouter.get('/diary/all', diaryController.index)
+diaryRouter.get('/diary/:date',diaryController.show)
+diaryRouter.post('/diary/post',diaryController.create)
 
-module.exports = diaryController
+module.exports = diaryRouter
